@@ -1,5 +1,5 @@
-import blackJack_project.hand as Hand
-import blackJack_project.chips as Chips
+from blackJack_project.hand import Hand
+from blackJack_project.chips import Chips
 
 
 class Dealer:

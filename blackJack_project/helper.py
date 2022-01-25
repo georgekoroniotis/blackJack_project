@@ -49,6 +49,8 @@ def hit_or_stand(deck, hand):
     else:
         playing = False
 
+    return playing
+
 
 def show_some(player, dealer):
     """

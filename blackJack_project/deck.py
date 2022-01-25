@@ -1,5 +1,5 @@
 import random
-import blackJack_project.card as Card
+import blackJack_project
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
@@ -16,7 +16,7 @@ class Deck:
         self.deck = []
         for s in suits:
             for r in ranks:
-                self.deck.append(Card(s, r))
+                self.deck.append(blackJack_project.card.Card(s, r))
 
     def __str__(self):
         return "The total amount of cards in the deck is {}".format(len(self.deck))
