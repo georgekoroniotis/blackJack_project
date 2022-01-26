@@ -7,8 +7,6 @@ class Hand:
         self.cards = []  # start with an empty list as we did in the Deck class
         self.values = 0  # start with zero value
         self.aces = 0  # add an attribute to keep track of aces
-        self.counter = 0
-        self.flag = True  # an attribute that checks if the ace has changed from one to
 
     def __str__(self):
         pass
@@ -17,19 +15,14 @@ class Hand:
         self.cards.append(card)
         self.values += card.value
 
-    def adjust_for_ace(self):
-        self.aces = 0
-        self.counter = 0
-        for card in self.cards:
-            if card.rank == 'Ace':
-                self.aces += 1
-            self.counter += 1
+        if card.rank == 'Ace':
+            self.aces += 1
 
-        if self.aces == 2 & self.counter == 2:
-            self.values = 21
-        elif self.aces == 1 and self.values > 21 and self.flag:
-            self.values = self.values - 10
-            self.flag = False
+    def adjust_for_ace(self):
+
+        while self.values > 21 and self.aces:
+            self.values -= 10
+            self.aces -= 1
 
     def get_cards(self):
         return self.cards
