@@ -6,7 +6,7 @@ from blackJack_project.helper import *
 
 if __name__ == "__main__":
     # Print an opening statement
-    print('Welcome to the Black Jack game!')
+    print('Welcome to Black Jack Game!')
 
     # Set up the Player's chips
     new_player = Player('George')

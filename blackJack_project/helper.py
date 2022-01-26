@@ -63,18 +63,17 @@ def show_some(player, dealer):
     :param dealer:
     :return:
     """
-    print("\n Player's Cards are: ")
-    print("------------------------")
-    for p in player.player_hand.get_cards():
-        print(p)
-    print("\n")
 
     print("\n Dealer's Card is: ")
-    print("------------------------")
+    print("---------------------")
+    print("<<Hidden Card>>")
     for d in range(len(dealer.dealer_hand.get_cards()) - 1):
         print(dealer.dealer_hand.get_cards()[d])
-    print("\n")
 
+    print("\n Player's Cards are: ")
+    print("-----------------------")
+    print(*player.player_hand.get_cards(), sep='\n')
+    print("\n")
 
 # hit(new_deck, new_player.player_hand)
 # hit(new_deck, new_player.player_hand)
@@ -94,16 +93,14 @@ def show_all(player, dealer):
     :param dealer:
     :return:
     """
-    print("Players Cards are: ")
-    print("------------------------")
-    for p in player.player_hand.get_cards():
-        print(p)
-    print("\n")
 
-    print("Dealers Cards are: ")
+    print("\nDealer's Cards are: ")
     print("------------------------")
-    for d in dealer.dealer_hand.get_cards():
-        print(d)
+    print(*dealer.dealer_hand.get_cards(), sep='\n')
+
+    print("\n Player's Cards are: ")
+    print("-----------------------")
+    print(*player.player_hand.get_cards(), sep='\n')
     print("\n")
 
 
