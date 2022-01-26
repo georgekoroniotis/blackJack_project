@@ -41,7 +41,7 @@ class Chips:
                         invalid_bet = True
                     else:
                         invalid_bet = False
-            except Exception:
+            except:
                 print('Please provide an integer number as a bet!')
                 continue
             break

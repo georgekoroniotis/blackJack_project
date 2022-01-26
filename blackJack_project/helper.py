@@ -63,13 +63,13 @@ def show_some(player, dealer):
     :param dealer:
     :return:
     """
-    print("Players Cards are: ")
+    print("\n Player's Cards are: ")
     print("------------------------")
     for p in player.player_hand.get_cards():
         print(p)
     print("\n")
 
-    print("Dealers Card is: ")
+    print("\n Dealer's Card is: ")
     print("------------------------")
     for d in range(len(dealer.dealer_hand.get_cards()) - 1):
         print(dealer.dealer_hand.get_cards()[d])
