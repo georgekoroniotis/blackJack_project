@@ -4,6 +4,8 @@ from blackJack_project.chips import Chips
 
 class Player:
 
+    # Player class
+
     def __init__(self, name):
         self.name = name
         self.player_hand = Hand()
