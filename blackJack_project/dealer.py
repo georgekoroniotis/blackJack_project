@@ -4,6 +4,8 @@ from blackJack_project.chips import Chips
 
 class Dealer:
 
+    # Dealer Class
+
     def __init__(self, name):
         self.dealer_hand = Hand()
         self.dealer_stuck = Chips(name)
